@@ -22,7 +22,7 @@ import com.service.DatabaseFileService;
 
 	    @PostMapping("/uploadFile")
 	    public Response uploadFile(@RequestParam("file") MultipartFile file) {
-	    	System.out.println("enters into uploadfile action file upload controller");
+	    	System.out.println("enters into uploadfile action file upload controller ...");
 	        DatabaseFile fileName = fileStorageService.storeFile(file);
 System.out.println(fileName.getFileName()+" is saved in database");
 	        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
